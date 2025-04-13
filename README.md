@@ -228,7 +228,7 @@ rikhrv-mern-TravelMemory-TG
  - Frontend shows same data 
         ![alt text](image/Frontend_postman_ver_1.png)
         ![alt text](image/Frontend_postman_ver_2.png)
- - get specific API details 
+ - get specific trip details 
         ![alt text](image/Backend_postman_POST_REQ_specific.png)
 
 ### 10. Appendix
