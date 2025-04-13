@@ -29,7 +29,7 @@ _____
 7. [Load Balancing Setup](#7-load-balancing-setup)
 8. [Cloudflare Integration](#8-cloudflare-integration)
 9. [Loadbalancer and DNS-verification](#9-loadbalancer-and-dns-verification)
-10. [Appendix]()
+10. [Appendix](#10-appendix)
 
 ### 1. Architecture Diagram
 ![alt text](image/AWSBASICS_HRV.jpg)
@@ -57,9 +57,9 @@ _____
 12. Instance will be initiated and once ec2 health status is okay . connect via earlier shared key to login. 
 ![alt text](image/EC2_instance.png)
 
-## 3. Backend Configuration
+### 3. Backend Configuration
 
-### Install Required Packages
+#### Install Required Packages
 ```bash
 # Update package lists
 sudo apt update -y && sudo apt upgrade -y
@@ -81,7 +81,7 @@ sudo apt install -y build-essential
 
 ![alt text](image/installation_verification.png)
 
-### Clone and Setup Backend
+#### Clone and Setup Backend
 
 ```bash
 # Clone the repository
@@ -111,7 +111,7 @@ pm2 list
 ```
 ![alt text](image/pm2_verification.png)
 
-## 4. Frontend Configuration
+### 4. Frontend Configuration
 updated Urls.js with Frontend load balancer created and configured in cloudflare DNS 
 
 ```bash
@@ -130,7 +130,7 @@ npm run build
 
 ![alt text](image/frontendfile_list.png)
 
-## 5. Nginx Configuration
+### 5. Nginx Configuration
 
 1. Take backup of existing default OOTB file and create default file to configure MERN  Application
 ```bash 
@@ -153,7 +153,7 @@ sudo systemctl status nginx # status of nginx
 
 ![alt text](image/Nginx_config.png)
 
-## 6. Scaling the Application
+### 6. Scaling the Application
 
 1. Navigate to EC2 Instance -> Actions ->Image and templates -> Create Image
 ![alt text](image/image_AMI_Creation.png)
@@ -164,7 +164,7 @@ sudo systemctl status nginx # status of nginx
 ![alt text](image/EC2-2_1.png)
 ![alt text](image/EC2-2-2.png)
 
-## 7. Load Balancing Setup
+### 7. Load Balancing Setup
 1. Go to EC2 Dashboard → Load Balancers → Create Load Balancer
 2. Select "Application Load Balancer"
     - Configure:
@@ -181,7 +181,7 @@ rikhrv-mern-TravelMemory-TG
 5. Create & Verify ALB DNS by checking DNS Name 
 ![alt text](image/ALB-1.png)
 ![alt text](image/ALB-2.png)
-## 8. Cloudflare Integration
+### 8. Cloudflare Integration
 - Log in to Cloudflare dashboard
 - Go to DNS > Records
 - Add records and provide appropriate target from earlier created ALB
@@ -199,7 +199,7 @@ rikhrv-mern-TravelMemory-TG
     TTL: Auto
     ```
 
-## 9. LoadBalancer and DNS Verification 
+### 9. LoadBalancer and DNS Verification 
 
 1. Navigate up to earlier created Target group verify that ***healthcheck***, if DNS has been configured correctly and nginx has been correctly configured ,Status should be ***green***
 
@@ -229,7 +229,7 @@ rikhrv-mern-TravelMemory-TG
  - get specific API details 
         ![alt text](image/Backend_postman_POST_REQ_specific.png)
 
-## 10. Appendix
+### 10. Appendix
 
  - To check Loadbalancer routing use below commands if needed 
 
@@ -241,7 +241,7 @@ rikhrv-mern-TravelMemory-TG
     #Check DNS propagation is working or not 
     dig your-loadbalancer-endpoints
     ```
-    
+
     ![alt text](image/image_appendix.png)
 
 
