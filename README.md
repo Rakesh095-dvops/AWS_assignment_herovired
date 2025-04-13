@@ -229,9 +229,20 @@ rikhrv-mern-TravelMemory-TG
  - get specific API details 
         ![alt text](image/Backend_postman_POST_REQ_specific.png)
 
-## Appendix
+## 10. Appendix
 
+ - To check Loadbalancer routing use below commands if needed 
 
+    ``` bash
+    #check the localhost 
+    curl -lk http://localhost:3000/hello
+    #check loadbalancer domain works for ec2 instance 
+    curl -lk your-loadbalancer-endpoints
+    #Check DNS propagation is working or not 
+    dig your-loadbalancer-endpoints
+    ```
+    
+    ![alt text](image/image_appendix.png)
 
 
 
