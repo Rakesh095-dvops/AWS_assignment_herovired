@@ -55,7 +55,9 @@ _____
 10. **Review and Launch:** Review your configuration and click "Launch".
 11. **Key Pair:** Choose an existing key pair or create a new one.  **Important:** Store the private key file (`.pem`) securely. You will need it to SSH into the instances.
 12. Instance will be initiated and once ec2 health status is okay . connect via earlier shared key to login. 
-![alt text](image/EC2_instance.png)
+    - ![alt text](image/EC2_1_image.png)
+    - ![alt text](image/EC2_1_VPC_SRCGRP.png)
+    - ![alt text](image/EC2_instance.png)
 
 ### 3. Backend Configuration
 
